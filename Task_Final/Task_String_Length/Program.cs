@@ -8,38 +8,38 @@
 
 int FindSize2(string[] arr1)
 {
-    int j = 0;
+    int p = 0;
     for (int i = 0; i < arr1.Length; i++)
     {
         if (arr1[i].Length <= 3)
         {
-            j++;
+            p++;
         }
     }
-    return j;
+    return p;
 }
 
 void FillArray2(string[] arr1, string[] arr2)
 {
-    int j = 0;
+    int p = 0;
     for (int i = 0; i < arr1.Length; i++)
     {
         if (arr1[i].Length <= 3)
         {
-            arr2[j] = arr1[i];            
-            j++;
+            arr2[p] = arr1[i];            
+            p++;
         }
     }
 }
 
 Console.Write("Укажите количество элементов: ");
 int size = Convert.ToInt32(Console.ReadLine());
-string[] array1 = new string[size];
+string[] arrayF = new string[size];
 Console.Write("Заполните массив: ");
-FillArray1(array1);
+FillArray1(arrayF);
 
-string[] array2 = new string[(FindSize2(array1))];
+string[] arrayS = new string[(FindSize2(arrayF))];
 
 Console.WriteLine();
-FillArray2(array1, array2);
-Console.Write(string.Join(" ", array2));
+FillArray2(arrayF, arrayS);
+Console.Write(string.Join(" ", arrayS));
